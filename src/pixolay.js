@@ -19,13 +19,13 @@
 +-------------------------------------------------------------------------------------------+
 */
 
-(function (overlayHelper, undefined) {
+(function (pixolay, undefined) {
 	'use strict';
 	var overlayHTML = '<div class=\"designOverlay\"><a class=\"overlay-off\" href=\"javascript:void(0)\"><span class=\"glyphicon glyphicon-eye-close\"><\/span><\/a><img id=\"no-overlay\" src=\"\" alt=\"\"\/><a class=\"overlay-on\" href=\"javascript:void(0)\"><span class=\"glyphicon glyphicon-eye-open\"><\/span><\/a><\/div>';
 
 	var overlayCSS = '<style type="text/css">' + '.designOverlay{position:absolute;left:0;top:0;width:100%;height:101%;text-align:center;}.designOverlay a{position:fixed;z-index:6000;width:40px;height:40px;color:#fff;font-size:2.5rem;text-align:center;}.designOverlay a span{color:rgba(255,255,255,0.5);vertical-align:sub;}.designOverlay img{opacity:0.3;position:relative;z-index:5000;}.overlay-off{left:55px;top:15px;background:rgba(113,19,19,0.5);}.overlay-on{left:15px;top:15px;background:rgba(19,112,20,0.5);}#no-overlay:target{display:none;}' + '</style>';
 
-	overlayHelper.init = function( imageFile ){
+	pixolay.init = function( imageFile ){
 		imageFile = typeof imageFile !== 'undefined' ? imageFile : 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC'; // Default
 		if (typeof jQuery != 'undefined') {
 
@@ -69,4 +69,4 @@
 	};
 
 
-})(window.overlayHelper = window.overlayHelper || {});
+})(window.pixolay = window.pixolay || {});
